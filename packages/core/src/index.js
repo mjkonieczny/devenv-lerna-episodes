@@ -1,1 +1,1 @@
-export default () => 'Welcome to core';
+export default (name) => `Welcome to ${name} from core`;

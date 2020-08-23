@@ -9,7 +9,8 @@ module.exports = {
   use: [
     airbnbBase(),
     library({
-      name: 'core'
+      name: 'core',
+      target: 'node'
     }),
     jest(),
   ],

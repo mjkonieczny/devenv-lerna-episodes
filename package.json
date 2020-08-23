@@ -13,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/matthew-the-equine/devenv-lerna-episodes/issues"
   },
-  "homepage": "https://github.com/matthew-the-equine/devenv-lerna-episodes#readme"
+  "homepage": "https://github.com/matthew-the-equine/devenv-lerna-episodes#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }

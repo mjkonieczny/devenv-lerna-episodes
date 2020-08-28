@@ -1,1 +1,2 @@
-export default (name) => `Welcome to ${name} from core`;
+export * from './card';
+export * from './deck';

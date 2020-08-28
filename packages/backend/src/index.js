@@ -1,10 +1,11 @@
-import { createServer } from 'http';
-import app from './app';
+import express from 'express';
+import cors from 'cors';
+import { createShuffledDeck } from 'core';
 
-const port = process.env.PORT || 3000;
+const app = express();
 
-createServer((request, response) => response.end(app())).listen(port, () => process.stdout.write(`Running on :${port}\n`));
+app.use(cors());
 
-if (module.hot) {
-  module.hot.accept('./app');
-}
+app.get('/', (_, res) => res.send(createShuffledDeck()));
+
+app.listen(3000);

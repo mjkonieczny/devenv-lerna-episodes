@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { isHigherCard, isSameCard } from 'core';
+import React, { useState, useEffect, FunctionComponent } from 'react';
+import { isHigherCard, isSameCard, Card as CardType } from 'core';
 import Card from './Card';
 
-export default () => {
+const Deck: FunctionComponent = () => {
   const [cards, setCards] = useState([]);
-  const [selectedCard, setSelectedCard] = useState();
+  const [selectedCard, setSelectedCard] = useState<CardType | undefined>();
 
   useEffect(() => {
     fetch('http://localhost:3000')
@@ -12,7 +12,7 @@ export default () => {
       .then((res) => setCards(res));
   }, []);
 
-  const getBackground = (card) => {
+  const getBackground = (card: CardType) => {
     if (!selectedCard) return 'transparent';
 
     if (isSameCard(card, selectedCard)) return 'yellow';
@@ -48,3 +48,5 @@ export default () => {
     </div>
   );
 };
+
+export default Deck;

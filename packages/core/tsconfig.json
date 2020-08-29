@@ -1,0 +1,10 @@
+{
+  "extends": "../../environment/tsconfig",
+  "compilerOptions": {
+    "outDir": "build",
+    "declaration": true,
+  },
+  "include": [
+    "src/**/*",
+  ],
+}

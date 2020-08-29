@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/matthew-the-equine/devenv-lerna-episodes#readme",
   "devDependencies": {
+    "deepmerge": "^4.2.2",
     "lerna": "^3.22.1"
   }
 }

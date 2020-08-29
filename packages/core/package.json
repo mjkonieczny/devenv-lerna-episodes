@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
+  "typings": "build/index.t.ts",
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode production",
-    "lint": "eslint --cache --format codeframe --ext mjs,js src test"
+    "build": "tsc",
+    "lint": "eslint --cache --format codeframe --ext ts src"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,13 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.10",
+    "@types/lodash": "^4.14.160",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "lodash": "^4.17.20",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
   }
 }

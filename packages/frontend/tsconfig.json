@@ -1,0 +1,12 @@
+{
+  "extends": "../../environment/tsconfig",
+  "compilerOptions": {
+    "module": "ESNext",
+    "jsx": "preserve",
+    "outDir": "dist",
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*",
+  ],
+}
